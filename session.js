@@ -29,13 +29,13 @@ for ( const player of players){
     console.log(player);
     const div = document.createElement('div')
     div.innerHTML = `
-    <div class="card" style="width: 18rem;">
+    <div class="card mt-4 rounded-3" style="width: 18rem;">
                     <img src="${player.strThumb}" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">${player.strPlayer}</h5>
                       <p class="card-text">Country: ${player.strNationality}</p>
                       <p class="card-text">Id: ${player.idPlayer}</p>
-                      <a href="#"  class="btn btn-danger">Details</a>
+                      <a href="#"  class="btn btn-danger">Delete</a>
                       <a href="#" onclick="details(${player.idPlayer})" class="btn btn-success">Details</a>
                       
                       
@@ -75,6 +75,7 @@ const showDetails = (info) =>{
     div.innerHTML =
     `<h2>Name: ${info.strPlayer}</h2>
     <p>Player Id : ${info.idPlayer}</p>
+    <p>Country: ${info.strNationality}</p>
     `
 
     
